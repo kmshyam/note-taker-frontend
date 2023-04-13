@@ -1,0 +1,139 @@
+.container {
+  height: 100vh;
+  background-color: #212529;
+  padding: 15rem 0;
+}
+
+.form {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem;
+}
+
+.form a {
+  text-decoration: none;
+}
+
+.form-heading {
+  text-align: center;
+  color: #f6fbff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-control,
+.form-action {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.email input {
+  border-radius: 0.6rem;
+}
+
+.form-control input {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.35px;
+  width: 100%;
+  background-color: #fdffff;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+  background-color: #fdffff;
+  border: none;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.password input {
+  border-right: none;
+}
+
+.icon {
+  width: 4rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.form-tc {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  color: #f6fbff;
+  margin: 1rem 0;
+}
+
+.form-tc input {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  font-size: 1.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+}
+
+.form-tc p {
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+}
+
+.form-tc p a {
+  text-decoration: none;
+  color: #ffc400;
+}
+
+.form-tc p a:hover,
+.form-tc p a:active {
+  text-decoration: underline;
+}
+
+.form-action button {
+  padding: 0.9rem;
+  background-color: #228be6;
+  border: 1px solid #228be6;
+  color: #e7f5ff;
+  font-size: 1.6rem;
+  border-radius: 0.6rem;
+  letter-spacing: 0.25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-action button:hover,
+.form-action button:active {
+  background-color: #1f7dcf;
+  border: 1px solid #1f7dcf;
+}
+
+.form-check {
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+  color: #f6fbff;
+  text-align: center;
+}
+
+.form-check p a {
+  text-decoration: none;
+  color: #ffc400;
+}
+
+.form-check p a:hover,
+.form-check p a:active {
+  text-decoration: underline;
+}

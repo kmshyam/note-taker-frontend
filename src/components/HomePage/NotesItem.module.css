@@ -1,0 +1,35 @@
+.list {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.date-section {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.9rem;
+  color: #525960;
+  margin-bottom: 2rem;
+}
+
+.notes-detail-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+  color: #525960;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1.8rem;
+  line-height: 1.3;
+}

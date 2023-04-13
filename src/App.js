@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./App.css";
+import MainNavigation from "./components/MainNavigation/MainNavigation";
+import AddNoteInput from "./components/NoteInput/AddNoteInput";
+import HomePage from "./components/HomePage/HomePage";
+import SignUpForm from "./components/UserAuthForms/SignUpForm";
+import LoginForm from "./components/UserAuthForms/LoginForm";
+import NoteDetailPage from "./components/NoteDetailPage/NoteDetailPage";
+import NoteEditPage from "./components/NoteEditPage/NoteEditPage";
+import { CheckAuthLoader } from "./components/utils/CheckAuth";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainNavigation />,
+    loader: CheckAuthLoader,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "note/add", element: <AddNoteInput /> },
+      { path: "note/:title", element: <NoteDetailPage /> },
+      { path: "note/:title/edit", element: <NoteEditPage /> },
+    ],
+  },
+  { path: "auth/signup", element: <SignUpForm /> },
+  { path: "auth/login", element: <LoginForm /> },
+]);
+
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
