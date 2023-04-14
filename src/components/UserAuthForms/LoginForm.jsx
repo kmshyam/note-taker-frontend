@@ -18,7 +18,7 @@ const LoginForm = () => {
     event.preventDefault();
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
-    fetch("http://localhost:8080/api/users/signin", {
+    fetch("https://note-taker-42la.onrender.com/api/users/signin", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

@@ -25,17 +25,20 @@ const NoteEditPage = () => {
   const submitUpdatedNoteHandler = (event) => {
     event.preventDefault();
     const token = localStorage.getItem("TOKEN");
-    fetch(`http://localhost:8080/api/notes/edit/${noteDetails._id}`, {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify({
-        title: enteredTitle,
-        description: enteredDescription,
-      }),
-    })
+    fetch(
+      `https://note-taker-42la.onrender.com/api/notes/edit/${noteDetails._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          title: enteredTitle,
+          description: enteredDescription,
+        }),
+      }
+    )
       .then((response) => {
         return response.json();
       })

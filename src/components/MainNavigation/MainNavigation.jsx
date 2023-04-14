@@ -14,7 +14,7 @@ const MainNavigation = () => {
   const navigate = useNavigate();
   const deleteAllNotesHandler = () => {
     const token = localStorage.getItem("TOKEN");
-    fetch(`http://localhost:8080/api/notes/delete/notes/all`, {
+    fetch(`https://note-taker-42la.onrender.com/api/notes/delete/notes/all`, {
       method: "DELETE",
       headers: {
         Authorization: token,
@@ -33,7 +33,7 @@ const MainNavigation = () => {
 
   const exportPdfHandler = () => {
     const token = localStorage.getItem("TOKEN");
-    fetch(`http://localhost:8080/api/notes/export/pdf`, {
+    fetch(`https://note-taker-42la.onrender.com/api/notes/export/pdf`, {
       method: "GET",
       headers: {
         Authorization: token,

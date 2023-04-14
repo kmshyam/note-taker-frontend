@@ -18,7 +18,7 @@ const AddNoteInput = () => {
   const submitNoteHandler = (event) => {
     event.preventDefault();
     const token = localStorage.getItem("TOKEN");
-    fetch("http://localhost:8080/api/notes/add", {
+    fetch("https://note-taker-42la.onrender.com/api/notes/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

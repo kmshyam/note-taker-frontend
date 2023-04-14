@@ -9,12 +9,15 @@ const NoteDetailPage = () => {
 
   const deleteNoteHandler = () => {
     const token = localStorage.getItem("TOKEN");
-    fetch(`http://localhost:8080/api/notes/delete/${noteDetails._id}`, {
-      method: "DELETE",
-      headers: {
-        Authorization: token,
-      },
-    })
+    fetch(
+      `https://note-taker-42la.onrender.com/api/notes/delete/${noteDetails._id}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })

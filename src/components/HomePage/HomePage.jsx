@@ -15,12 +15,15 @@ const HomePage = () => {
     const token = localStorage.getItem("TOKEN");
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/notes`, {
-          method: "GET",
-          headers: {
-            Authorization: token,
-          },
-        });
+        const response = await fetch(
+          `https://note-taker-42la.onrender.com/api/notes`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: token,
+            },
+          }
+        );
         const responseData = await response.json();
         if (!response.ok) {
           throw new Error(responseData.message);
@@ -35,7 +38,7 @@ const HomePage = () => {
 
   const clickNoteHandler = (id) => {
     const token = localStorage.getItem("TOKEN");
-    fetch(`http://localhost:8080/api/notes/${id}`, {
+    fetch(`https://note-taker-42la.onrender.com/api/notes/${id}`, {
       method: "GET",
       headers: {
         Authorization: token,
@@ -67,12 +70,15 @@ const HomePage = () => {
       return;
     }
     const token = localStorage.getItem("TOKEN");
-    fetch(`http://localhost:8080/api/notes/search/${searchValue}`, {
-      method: "GET",
-      headers: {
-        Authorization: token,
-      },
-    })
+    fetch(
+      `https://note-taker-42la.onrender.com/api/notes/search/${searchValue}`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })
